@@ -17,7 +17,7 @@ SET (subprojects
      toproto
      tsort)
 
-SET (NBTOOL_CONFIG_DIR ${CMAKE_BINARY_DIR}/compat)
+SET (NBTOOL_CONFIG_DIR ${CMAKE_BINARY_DIR}/lib/compat)
 
 # build all projects
 FOREACH (project ${subprojects})

@@ -2,12 +2,7 @@ CMAKE_MINIMUM_REQUIRED (VERSION 3.0)
 
 PROJECT (minix-tools)
 
-# define subprojects
-SET (subprojects
-     lib
-     #byacc
-     #flex
-     #host-mkdep
+SET (TOOLS
      join
      mkfs.mfs
      mktemp
@@ -18,7 +13,16 @@ SET (subprojects
      toproto
      tsort)
 
+# define subprojects
+SET (subprojects
+     lib
+     #byacc
+     #flex
+     #host-mkdep
+     ${TOOLS})
+
 SET (NBTOOL_CONFIG_DIR ${CMAKE_BINARY_DIR}/lib/compat)
+SET (INSTALL_DIR ${CMAKE_BINARY_DIR}/install)
 
 # build all projects
 FOREACH (project ${subprojects})

@@ -1,0 +1,15 @@
+GET_FILENAME_COMPONENT (COMPONENT ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+
+ADD_LIBRARY (${COMPONENT}
+             gen/pw_scan.c)
+INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/sys
+                     ${CMAKE_CURRENT_SOURCE_DIR}  
+                     ${CMAKE_CURRENT_BINARY_DIR})
+ADD_DEFINITIONS (-DHAVE_NBTOOL_CONFIG_H)
+ADD_DEFINITIONS (-Wno-implicit-function-declaration)
+ADD_CUSTOM_COMMAND (OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/nbtool_config.h
+                    COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/configure)
+ADD_CUSTOM_TARGET (nbtool_config
+                   DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/nbtool_config.h)
+
+ADD_DEPENDENCIES (${COMPONENT} nbtool_config)

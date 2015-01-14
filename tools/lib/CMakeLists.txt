@@ -1,7 +1,6 @@
 # define subprojects
 SET (subprojects
-     compat
-     terminfo)
+     compat)
 
 # build all projects
 FOREACH (project ${subprojects})

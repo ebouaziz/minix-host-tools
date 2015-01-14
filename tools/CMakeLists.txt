@@ -4,14 +4,15 @@ PROJECT (minix-tools)
 
 # define subprojects
 SET (subprojects
+     lib
      #byacc
-     compat
      #flex
      #host-mkdep
      join
      mkfs.mfs
      mktemp
      # mtree
+     nbperf
      pwd_mkdb
      tic
      toproto

@@ -1,7 +1,11 @@
 GET_FILENAME_COMPONENT (COMPONENT ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
 ADD_LIBRARY (${COMPONENT}
-             gen/pw_scan.c)
+             gen/pw_scan.c
+             mi_vector_hash.c
+             cdb/cdbr.c
+             cdb/cdbw.c
+             efun.c)
 INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/sys
                      ${CMAKE_CURRENT_SOURCE_DIR}  
                      ${CMAKE_CURRENT_BINARY_DIR})

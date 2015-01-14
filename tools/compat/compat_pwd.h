@@ -34,7 +34,7 @@
 
 /* A very special version of <pwd.h> for pwd_mkdb(8) and __nbcompat_pwscan(3). */
 
-#include "../../include/pwd.h"
+#include "gen/pwd.h"
 
 #define passwd __nbcompat_passwd
 #define pw_scan __nbcompat_pw_scan

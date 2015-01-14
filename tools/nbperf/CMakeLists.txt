@@ -11,5 +11,6 @@ INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/lib/compat
                      ${NBTOOL_CONFIG_DIR}
                      ${CMAKE_SOURCE_DIR}/sys)
 ADD_DEFINITIONS (-DHAVE_NBTOOL_CONFIG_H)
+ADD_DEFINITIONS (-Wno-implicit-function-declaration)
 ADD_DEPENDENCIES (${COMPONENT} nbtool_config)
 TARGET_LINK_LIBRARIES (${COMPONENT} compat)

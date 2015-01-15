@@ -21,7 +21,7 @@ SET (subprojects
      ${TOOLS})
 
 SET (NBTOOL_CONFIG_DIR ${CMAKE_BINARY_DIR}/lib/compat)
-SET (INSTALL_DIR ${CMAKE_BINARY_DIR}/install)
+SET (INSTALL_DIR ${CMAKE_INSTALL_PREFIX})
 
 # build all projects
 FOREACH (project ${subprojects})

@@ -1,5 +1,6 @@
 GET_FILENAME_COMPONENT (COMPONENT ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
+# it might be worth to generate a dedicated m4 tool here
 FIND_PROGRAM (m4 m4)
 
 ADD_EXECUTABLE (nb${COMPONENT}
@@ -34,7 +35,7 @@ INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/include
 ADD_DEFINITIONS (-DHAVE_NBTOOL_CONFIG_H
                  -D_FILE_OFFSET_BITS=64
                  -DHAVE_CONFIG_H
-                 -DM4="\\"${m4}\\"")
+                 -DM4=\"${m4}\")
 ADD_DEPENDENCIES (nb${COMPONENT} nbtool_config)
 
 INSTALL (TARGETS nb${COMPONENT}
@@ -59,10 +60,7 @@ ADD_CUSTOM_COMMAND (OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/skel.c
                                 -e 's/m4preproc_/m4_/g'
                             ${CMAKE_CURRENT_SOURCE_DIR}/dist/flex.skl |
                             m4 -I ${CMAKE_CURRENT_SOURCE_DIR}/dist
-                               -P
-                               -DFLEX_MAJOR_VERSION=2
-                               -DFLEX_MINOR_VERSION=5
-                               -DFLEX_SUBMINOR_VERSION=37 |
+                               -P |
                             sed -e 's/m4postproc_/m4_/g' |
                             sh ${CMAKE_CURRENT_SOURCE_DIR}/dist/mkskel.sh >
                                ${CMAKE_CURRENT_BINARY_DIR}/skel.c

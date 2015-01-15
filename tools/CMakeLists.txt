@@ -11,14 +11,13 @@ SET (TOOLS
      pwd_mkdb
      tic
      toproto
-     tsort)
+     tsort
+     lex)
 
 # define subprojects
 SET (subprojects
      lib
      #byacc
-     #flex
-     #host-mkdep
      ${TOOLS})
 
 SET (NBTOOL_CONFIG_DIR ${CMAKE_BINARY_DIR}/lib/compat)

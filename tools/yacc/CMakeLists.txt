@@ -23,6 +23,9 @@ ADD_DEFINITIONS (-DHAVE_NBTOOL_CONFIG_H
                  -D_FILE_OFFSET_BITS=64
                  -DHAVE_CONFIG_H
                  -DGCC_NORETURN=__dead)
+SET_SOURCE_FILES_PROPERTIES (dist/reader.c
+                             PROPERTIES
+                             COMPILE_FLAGS "-Wno-return-type")
 ADD_DEPENDENCIES (nb${COMPONENT} nbtool_config)
 
 INSTALL (TARGETS nb${COMPONENT}

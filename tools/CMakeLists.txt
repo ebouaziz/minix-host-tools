@@ -12,12 +12,12 @@ SET (TOOLS
      tic
      toproto
      tsort
-     lex)
+     lex
+     yacc)
 
 # define subprojects
 SET (subprojects
      lib
-     #byacc
      ${TOOLS})
 
 SET (NBTOOL_CONFIG_DIR ${CMAKE_BINARY_DIR}/lib/compat)

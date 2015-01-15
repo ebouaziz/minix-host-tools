@@ -6,7 +6,7 @@ SET (TOOLS
      join
      mkfs.mfs
      mktemp
-     # mtree
+     mtree
      nbperf
      pwd_mkdb
      tic

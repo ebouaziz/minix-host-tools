@@ -14,6 +14,7 @@ ADD_EXECUTABLE (nb${COMPONENT}
                 verify.c)
 
 INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/lib/compat
+                     ${CMAKE_SOURCE_DIR}/include
                      ${NBTOOL_CONFIG_DIR})
 ADD_DEFINITIONS (-DHAVE_NBTOOL_CONFIG_H)
 ADD_DEFINITIONS (-Wno-implicit-function-declaration)

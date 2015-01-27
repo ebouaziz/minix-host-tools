@@ -3,16 +3,20 @@ GET_FILENAME_COMPONENT (COMPONENT ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 ADD_LIBRARY (${COMPONENT}
              efun.c
              fgetln.c
+             fparseln.c
              getmode.c
              mi_vector_hash.c
              pack_dev.c
+             setgroupent.c
+             setpassent.c
+             setprogname.c
              stat_flags.c
+             strlcpy.c
              cdb/cdbr.c
              cdb/cdbw.c
-             gen/getprogname.c
-             gen/setprogname.c
              gen/pw_scan.c
              gen/pwcache.c
+             gen/unvis.c
              gen/vis.c
              hash/md/md5c.c
              hash/md/md5hl.c
@@ -26,7 +30,7 @@ ADD_LIBRARY (${COMPONENT}
              hash/sha2/sha512hl.c)
 INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/sys
                      ${CMAKE_SOURCE_DIR}/include
-                     ${CMAKE_CURRENT_SOURCE_DIR}  
+                     ${CMAKE_CURRENT_SOURCE_DIR}
                      ${CMAKE_CURRENT_BINARY_DIR})
 ADD_DEFINITIONS (-DHAVE_NBTOOL_CONFIG_H)
 ADD_DEFINITIONS (-Wno-implicit-function-declaration)

@@ -9,6 +9,7 @@ ADD_LIBRARY (${COMPONENT}
              stat_flags.c
              cdb/cdbr.c
              cdb/cdbw.c
+             gen/getprogname.c
              gen/pw_scan.c
              gen/pwcache.c
              gen/vis.c

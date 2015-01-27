@@ -2,6 +2,7 @@ GET_FILENAME_COMPONENT (COMPONENT ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
 ADD_LIBRARY (${COMPONENT}
              efun.c
+             fgetln.c
              getmode.c
              mi_vector_hash.c
              pack_dev.c
@@ -21,7 +22,7 @@ ADD_LIBRARY (${COMPONENT}
              hash/sha2/sha256hl.c
              hash/sha2/sha384hl.c
              hash/sha2/sha512hl.c)
-INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/compat/sys
+INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/sys
                      ${CMAKE_SOURCE_DIR}/include
                      ${CMAKE_CURRENT_SOURCE_DIR}  
                      ${CMAKE_CURRENT_BINARY_DIR})

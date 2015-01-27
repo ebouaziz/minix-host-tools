@@ -21,7 +21,8 @@ ADD_LIBRARY (${COMPONENT}
              hash/sha2/sha256hl.c
              hash/sha2/sha384hl.c
              hash/sha2/sha512hl.c)
-INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/sys
+INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/compat/sys
+                     ${CMAKE_SOURCE_DIR}/include
                      ${CMAKE_CURRENT_SOURCE_DIR}  
                      ${CMAKE_CURRENT_BINARY_DIR})
 ADD_DEFINITIONS (-DHAVE_NBTOOL_CONFIG_H)

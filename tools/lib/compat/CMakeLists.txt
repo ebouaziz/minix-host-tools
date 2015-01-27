@@ -10,6 +10,7 @@ ADD_LIBRARY (${COMPONENT}
              cdb/cdbr.c
              cdb/cdbw.c
              gen/getprogname.c
+             gen/setprogname.c
              gen/pw_scan.c
              gen/pwcache.c
              gen/vis.c

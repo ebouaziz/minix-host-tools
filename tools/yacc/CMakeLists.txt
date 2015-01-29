@@ -27,6 +27,7 @@ SET_SOURCE_FILES_PROPERTIES (dist/reader.c
                              PROPERTIES
                              COMPILE_FLAGS "-Wno-return-type")
 ADD_DEPENDENCIES (nb${COMPONENT} nbtool_config)
+TARGET_LINK_LIBRARIES (nb${COMPONENT} compat)
 
 INSTALL (TARGETS nb${COMPONENT}
          RUNTIME DESTINATION ${INSTALL_DIR})

@@ -4,10 +4,12 @@ ADD_EXECUTABLE (nb${COMPONENT}
                 ${CMAKE_SOURCE_DIR}/lib/libterminfo/compile.c
                 tic.c
                 ${CMAKE_CURRENT_BINARY_DIR}/hash.c)
-INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/lib/compat
+INCLUDE_DIRECTORIES (${CMAKE_SOURCE_DIR}/include
+                     ${CMAKE_SOURCE_DIR}/lib/compat
                      ${CMAKE_SOURCE_DIR}/lib/libterminfo
                      ${NBTOOL_CONFIG_DIR})
-ADD_DEFINITIONS (-DHAVE_NBTOOL_CONFIG_H)
+ADD_DEFINITIONS (-DHAVE_NBTOOL_CONFIG_H=1)
+ADD_DEFINITIONS (-D_FILE_OFFSET_BITS=64)
 ADD_DEFINITIONS (-Wno-implicit-function-declaration)
 ADD_DEPENDENCIES (nb${COMPONENT} nbtool_config)
 TARGET_LINK_LIBRARIES (nb${COMPONENT} compat)

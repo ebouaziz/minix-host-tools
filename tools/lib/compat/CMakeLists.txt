@@ -5,12 +5,14 @@ ADD_LIBRARY (${COMPONENT}
              fgetln.c
              fparseln.c
              getmode.c
+             issetugid.c
              mi_vector_hash.c
              pack_dev.c
              setgroupent.c
              setpassent.c
              setprogname.c
              stat_flags.c
+             strlcat.c
              strlcpy.c
              btree/bt_close.c
              btree/bt_conv.c
@@ -48,7 +50,6 @@ ADD_LIBRARY (${COMPONENT}
              hash/sha2/sha256hl.c
              hash/sha2/sha384hl.c
              hash/sha2/sha512hl.c
-             issetugid.c
              mpool/mpool.c
              recno/rec_close.c
              recno/rec_delete.c

@@ -5,6 +5,7 @@ PROJECT (minix-tools)
 SET (TOOLS
      join
      mkfs.mfs
+     mkproto
      mktemp
      mtree
      nbperf
